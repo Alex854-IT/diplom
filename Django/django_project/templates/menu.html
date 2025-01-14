@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Главная страница{% endblock %}</title>
+    <link rel = 'stylesheet' type="text/css" href = '{% static "style.css" %}'>
+</head>
+<body>
+<header>{% block pagename %}<h1>Главная страница</h1>{% endblock %}</header><br>
+
+    <menu>
+        {% block menu %}
+        <a href="/platform/#"><h3>Главная</h3></a>
+        <a href="/platform/games"><h3>Магазин</h3></a>
+        <a href="/platform/cart"><h3>Корзина</h3></a>
+        <a href="/platform/news"><h3>Новости</h3></a>
+        {% endblock %}
+    </menu>
+{% block content %}
+
+{% endblock %}
+</body>
+</html>
